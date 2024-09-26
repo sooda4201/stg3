@@ -317,3 +317,5 @@ document.onkeydown = function(e)
 	
 	drawAll();
 }
+
+//スタート画面
