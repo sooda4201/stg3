@@ -319,3 +319,4 @@ document.onkeydown = function(e)
 }
 
 //スタート画面
+
