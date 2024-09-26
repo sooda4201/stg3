@@ -11,7 +11,6 @@ const BLOCK_SIZE = 30;
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
 const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
-con.fillStyle="white"; 
 
 //テトロミノのサイズ
 const TETRO_SIZE =4;
