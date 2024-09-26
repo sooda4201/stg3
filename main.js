@@ -3,7 +3,7 @@ const GAME_SPEED = 500;
 
 //フィールドサイズ
 const FIELD_COL = 10;
-const FIELD_ROW = 20;
+const FIELD_ROW = 18;
 
 //ブロック一つのサイズ(ピクセル)
 const BLOCK_SIZE = 30;
