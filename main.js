@@ -1,5 +1,5 @@
 //落ちるスピード
-const GAME_SPEED = 300;
+const GAME_SPEED = 500;
 
 //フィールドサイズ
 const FIELD_COL = 10;
@@ -311,6 +311,8 @@ document.onkeydown = function(e)
 			let ntetro = rotate();
 			if( checkMove( 0, 0, ntetro) ) tetro = ntetro;
 			break;
+		case 82:
+			location.reload(true);	
 	}
 	
 	drawAll();
