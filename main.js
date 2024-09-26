@@ -312,7 +312,7 @@ document.onkeydown = function(e)
 			if( checkMove( 0, 0, ntetro) ) tetro = ntetro;
 			break;
 		case 82:
-			location.reload(true);	
+			location.reload(true);
 	}
 	
 	drawAll();
