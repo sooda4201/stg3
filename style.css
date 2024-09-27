@@ -1,3 +1,19 @@
+#scoreContainer{
+font-size: 20px;
+background-color:rgba(255, 255, 255, 0.7);
+padding:10px;
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+box-sizing:border-box;
+}
+
+#scoreDisplay{
+    color:orangered;
+}
+ 
  body{
     background-color: aquamarine;
  }

@@ -314,8 +314,21 @@ document.onkeydown = function(e)
 		case 82: //Rリセット
 			location.reload(true); //ページ再読み込み
 	}
-	
+
 	drawAll();
+}
+
+//スコア表示
+let score=0;
+
+function updateScore(){
+ score += 10;
+ document.getElementById("scoreDisplay").innerText='スコア：${score}';
+}
+
+//ブロックを消したときにこの関数を呼び出す
+function onbreak(){
+	updateScore();
 }
 
 //スタート画面
