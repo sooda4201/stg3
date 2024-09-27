@@ -6,7 +6,7 @@ const FIELD_COL = 9;
 const FIELD_ROW = 18;
 
 //ブロック一つのサイズ(ピクセル)
-const BLOCK_SIZE = 17;
+const BLOCK_SIZE = 27;
 
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
