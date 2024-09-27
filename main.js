@@ -323,11 +323,11 @@ let score=0;
 
 function updateScore(){
  score += 10;
- document.getElementById("scoreDisplay").innerText='スコア：${score}';
+ document.getElementById("scoreDisplay").innerText=`スコア:${score}`;
 }
 
 //ブロックを消したときにこの関数を呼び出す
-function onflag(){
+function onbreak(){
 	updateScore();
 }
 
