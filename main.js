@@ -2,11 +2,11 @@
 const GAME_SPEED = 500;
 
 //フィールドサイズ
-const FIELD_COL = 9;
-const FIELD_ROW = 18;
+const FIELD_COL = 10;
+const FIELD_ROW = 20;
 
 //ブロック一つのサイズ(ピクセル)
-const BLOCK_SIZE = 27;
+const BLOCK_SIZE = 30;
 
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
