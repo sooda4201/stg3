@@ -1,5 +1,5 @@
 //落ちるスピード
-const GAME_SPEED = 500;
+const GAME_SPEED = 400;
 
 //フィールドサイズ
 const FIELD_COL = 10;
@@ -13,7 +13,7 @@ const SCREEN_W = BLOCK_SIZE * FIELD_COL;
 const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
 
 //テトロミノのサイズ
-const TETRO_SIZE =2;
+const TETRO_SIZE =4;
 
 const TETRO_COLORS =[
 	"#000",			//0空
