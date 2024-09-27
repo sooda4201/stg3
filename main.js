@@ -327,7 +327,7 @@ function updateScore(){
 }
 
 //ブロックを消したときにこの関数を呼び出す
-function onflag(){
+function oncheckLine(){
 	updateScore();
 }
 
