@@ -321,14 +321,14 @@ document.onkeydown = function(e)
 //スコア表示
 let score=0;
 
-function updateScore(){
- score += 10;
- document.getElementById("scoreDisplay").innerText=`スコア:${score}`;
+function updateScore(points){
+ score += points;
+ document.getElementById("scoreDisplay").innerText='Score: ' + score;
 }
 
 //ブロックを消したときにこの関数を呼び出す
-function onbreak(){
-	updateScore();
+function Break(){
+	updateScore(10);
 }
 
 //スタート画面
