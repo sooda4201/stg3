@@ -259,6 +259,7 @@ function checkLine()
 				for(let nx=0;nx<FIELD_COL ; nx++)
 				{
 					field[ny][nx] = field[ny-1][nx];
+					updateScore();
 				}
 			}
 		}
@@ -327,9 +328,6 @@ function updateScore(){
 }
 
 //ブロックを消したときにこの関数を呼び出す
-function onbreak(){
-	updateScore();
-}
 
 //スタート画面
 
