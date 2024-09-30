@@ -262,8 +262,8 @@ function checkLine()
 				}
 			}
 		}
+		updateScore();
 	}
-	updateScore();
 }
 
 // ブロックの落ちる処理
