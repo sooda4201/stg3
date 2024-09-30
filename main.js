@@ -247,6 +247,7 @@ function checkLine()
 			{
 				flag=false;
 				break;
+				updateScore();
 			}
 		}
 		
@@ -258,9 +259,7 @@ function checkLine()
 			{
 				for(let nx=0;nx<FIELD_COL ; nx++)
 				{
-					updateScore();
 					field[ny][nx] = field[ny-1][nx];
-					
 				}
 			}
 		}
