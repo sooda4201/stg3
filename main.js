@@ -258,8 +258,8 @@ function checkLine()
 			{
 				for(let nx=0;nx<FIELD_COL ; nx++)
 				{
-					field[ny][nx] = field[ny-1][nx];
 					updateScore();
+					field[ny][nx] = field[ny-1][nx];
 				}
 			}
 		}
