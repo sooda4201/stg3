@@ -260,9 +260,9 @@ function checkLine()
 				{
 					field[ny][nx] = field[ny-1][nx];
 				}
+				updateScore();
 			}
 		}
-		updateScore();
 	}
 }
 
