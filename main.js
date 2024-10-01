@@ -322,7 +322,7 @@ document.onkeydown = function(e)
 let score=0;
 
 function updateScore(){
- score += 10;
+ score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
 
