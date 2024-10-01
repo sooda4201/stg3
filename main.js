@@ -169,6 +169,14 @@ function drawAll()
 		con.strokeText(s,x,y);
 		con.fillStyle="white";
 		con.fillText(s,x,y);
+		document.onkeydown=function(e)
+		{
+			switch(e.keyCode)
+			{
+			case 82: //Rリセット
+			location.reload(true); //ページ再読み込み
+			}
+		} 
 	}
 }
 
@@ -311,8 +319,7 @@ document.onkeydown = function(e)
 			let ntetro = rotate();
 			if( checkMove( 0, 0, ntetro) ) tetro = ntetro;
 			break;
-		case 82: //Rリセット
-			location.reload(true); //ページ再読み込み
+		
 	}
 	drawAll();
 }
