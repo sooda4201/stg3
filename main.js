@@ -314,7 +314,6 @@ document.onkeydown = function(e)
 		case 82: //Rリセット
 			location.reload(true); //ページ再読み込み
 	}
-
 	drawAll();
 }
 
