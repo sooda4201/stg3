@@ -169,6 +169,7 @@ function drawAll()
 		con.strokeText(s,x,y);
 		con.fillStyle="white";
 		con.fillText(s,x,y);
+		
 		document.onkeydown=function(e)
 		{
 			switch(e.keyCode)
