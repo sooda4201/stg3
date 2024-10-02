@@ -364,6 +364,8 @@ document.addEventListener("DOMContentLoaded",(event)=>{
 	document.addEventById("startbutton").addEventListener("click",startGame);
 });
 
-var str1="・十字キーで移動";
-var str2="・スペースキーで回転";
-var str3="・Rでリセット";
+var str="・十字キーで移動";
+var str="・スペースキーで回転";
+var str="・Rでリセット";
+
+console.log(str);
