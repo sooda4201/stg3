@@ -363,3 +363,5 @@ function update()
 document.addEventListener("DOMContentLoaded",(event)=>{
 	document.addEventById("startbutton").addEventListener("click",startGame);
 });
+
+var str1="・十字キーで移動";
