@@ -346,7 +346,7 @@ let gameOver =false;
 
 function startGame()
 {
-	gameOveer=false;
+	gameOver=false;
 	score=0;
 	  document.getElementById("finalScore").style.display="none";
 	 update();
