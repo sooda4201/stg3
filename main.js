@@ -1,3 +1,5 @@
+
+
 //落ちるスピード
 const GAME_SPEED = 400;
 
@@ -332,8 +334,6 @@ function updateScore(){
  score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
-
-//ブロックを消したときにこの関数を呼び出す
 
 //スタート画面
 
