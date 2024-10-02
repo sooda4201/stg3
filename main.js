@@ -347,5 +347,19 @@ function startGame()
 {
 	gameOveer=false;
 	score=0;
-	
+	 document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
+	  document.getElementById("finalScore").style.display="none";
+	 update();
 }
+
+function update()
+{
+	if(gameOver)return;
+
+	requestAnimationFrame(update);
+}
+
+//ゲーム開始準備
+document.addEventListener("DOMContentLoaded",(event)=>{
+	document.addEventById("startbutton").addEventListener("click",startGame);
+});
