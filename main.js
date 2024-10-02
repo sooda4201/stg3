@@ -365,3 +365,5 @@ document.addEventListener("DOMContentLoaded",(event)=>{
 });
 
 var str1="・十字キーで移動";
+var str2="・スペースキーで回転";
+var str3="・Rでリセット";
