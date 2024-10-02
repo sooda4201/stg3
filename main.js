@@ -363,9 +363,3 @@ function update()
 document.addEventListener("DOMContentLoaded",(event)=>{
 	document.addEventById("startbutton").addEventListener("click",startGame);
 });
-
-var str="・十字キーで移動";
-var str="・スペースキーで回転";
-var str="・Rでリセット";
-
-console.log(str);
