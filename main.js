@@ -347,7 +347,7 @@ function startGame()
 {
 	gameOveer=false;
 	score=0;
-	 document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
+	   document.getElementById("scoreDisplay").innerText=`スコア: ${score}`
 	  document.getElementById("finalScore").style.display="none";
 	 update();
 }
