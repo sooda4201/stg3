@@ -335,7 +335,8 @@ document.onkeydown = function(e)
 //スコア表示
 let score=0;
 
-function updateScore(){
+function updateScore()
+{
  score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
