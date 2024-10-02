@@ -1,9 +1,3 @@
-document.onkeydown=function(e)
-		{
-			switch(e.keyCode)
-			{
-			case 82: //Rリセット
-			}
 
 //落ちるスピード
 const GAME_SPEED = 400;
@@ -340,7 +334,7 @@ function updateScore()
  score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
-		}
+
 //スタート画面
 let gameOver =false;
 
