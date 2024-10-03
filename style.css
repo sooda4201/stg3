@@ -12,10 +12,6 @@ justify-content:center;
 box-sizing:border-box;
 }
 
-ul{
-    color:crimson;
-}
-
 #scoreDisplay
 {
     color:rgb(255, 68, 0);
