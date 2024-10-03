@@ -342,25 +342,4 @@ function updateScore()
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
 }
-//スタート画面
-let gameOver =false;
 
-function startGame()
-{
-	gameOver=false;
-	score=0;
-	  document.getElementById("finalScore").style.display="none";
-	 update();
-}
-
-function update()
-{
-	if(gameOver)return;
-
-	requestAnimationFrame(update);
-}
-
-//ゲーム開始準備
-document.addEventListener("DOMContentLoaded",(event)=>{
-	document.addEventById("startbutton").addEventListener("click",startGame);
-});
