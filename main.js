@@ -20,7 +20,8 @@ const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
 //テトロミノのサイズ
 const TETRO_SIZE =4;
 
-const TETRO_COLORS =[
+const TETRO_COLORS =
+[
 	"#000",			//0空
 	"#6CF",			//1水色
 	"#F92",			//2オレンジ
@@ -31,7 +32,8 @@ const TETRO_COLORS =[
 	"#5B5"			//7緑
 ];
 
-const TETRO_TYPES = [
+const TETRO_TYPES = 
+[
 	[],	// 0.空っぽ
 	
 	[					// 1.I
