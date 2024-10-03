@@ -3,9 +3,7 @@ document.onkeydown = function(e)
 	switch( e.keyCode )
 	{
        case 32:
-		
 	
-
 //落ちるスピード
 const GAME_SPEED = 500;
 //フィールドサイズ
