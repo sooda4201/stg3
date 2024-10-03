@@ -1,10 +1,20 @@
-
+#title
+{
+font-size: 20px;
+background-color:rgba(255, 255, 255, 0.7);
+padding:10px;
+position:absolute;
+top: 80px;
+left: 350px;
+width:35%;
+display:flex;
+justify-content:center;
+box-sizing:border-box;
+}
 
 #tetorisu
 {
-    font-size: 30px;
     color:black;
-    justify-content:center;
 }
 
 #scoreContainer
