@@ -1,3 +1,12 @@
+
+
+#tetorisu
+{
+    font-size: 30px;
+    color:aquamarine;
+    justify-content:center;
+}
+
 #scoreContainer
 {
 font-size: 20px;
@@ -17,12 +26,6 @@ box-sizing:border-box;
     color:rgb(255, 68, 0);
 }
 
-#tetorisu
-{
-    font-size: 30px;
-    color:aquamarine;
-    justify-content:center;
-}
  
  body
  {
