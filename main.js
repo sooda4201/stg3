@@ -4,7 +4,7 @@ document.onkeydown = function(e)
 	{
        case 32:
 		
-	}
+	
 
 //落ちるスピード
 const GAME_SPEED = 500;
@@ -341,4 +341,4 @@ function updateScore()
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
 }
-
+}
