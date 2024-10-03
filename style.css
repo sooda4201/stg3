@@ -16,6 +16,12 @@ box-sizing:border-box;
 {
     color:rgb(255, 68, 0);
 }
+
+#tetorisu
+{
+    color:aquamarine;
+    justify-content:center;
+}
  
  body
  {
