@@ -7,18 +7,18 @@ document.onkeydown = function(e)
 //落ちるスピード
 const GAME_SPEED = 500;
 //フィールドサイズ
-const FIELD_COL = 10;
-const FIELD_ROW = 20;
+const FIELD_COL = 5;
+const FIELD_ROW = 10;
 
 //ブロック一つのサイズ(ピクセル)
-const BLOCK_SIZE = 30;
+const BLOCK_SIZE = 15;
 
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
 const SCREEN_H = BLOCK_SIZE * FIELD_ROW;
 
 //テトロミノのサイズ
-const TETRO_SIZE =4;
+const TETRO_SIZE =2;
 
 const TETRO_COLORS =
 [
