@@ -7,8 +7,7 @@ document.onkeydown = function(e)
 	}
 
 //落ちるスピード
-const GAME_SPEED = 400;
-
+const GAME_SPEED = 500;
 //フィールドサイズ
 const FIELD_COL = 10;
 const FIELD_ROW = 20;
