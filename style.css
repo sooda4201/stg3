@@ -19,6 +19,7 @@ box-sizing:border-box;
 
 #tetorisu
 {
+    font-size: 30px;
     color:aquamarine;
     justify-content:center;
 }
