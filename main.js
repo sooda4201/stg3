@@ -339,6 +339,9 @@ function updateScore()
 {
  score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
+
+const string="・十字キーで移動";
+console.log(string);
 }
 }
 }
