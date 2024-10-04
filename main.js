@@ -1,8 +1,5 @@
 document.onkeydown = function(e)
 {	
-const string0="テトリス";
-console.log(string0);
-
 	switch( e.keyCode )
 	{
        case 32:
@@ -343,7 +340,5 @@ function updateScore()
  score += 1;
  document.getElementById("scoreDisplay").innerText=`スコア: ${score}`;
 }
-const string="・十字キーで移動";
-console.log(string);
 }
 }
