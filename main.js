@@ -315,7 +315,7 @@ document.onkeydown = function(e)
 			if( checkMove( -1, 0 ) )tetro_x--;
 			break;
 		case 38:// 上
-			//if( checkMove(  0,10 ) )tetro_y++;
+			if( checkMove(  0,15 ) )tetro_y++;
 			break;
 		case 39:// 右
 			if( checkMove(  1, 0 ) )tetro_x++;
