@@ -1,5 +1,8 @@
 document.onkeydown = function(e)
 {	
+const string0="テトリス";
+console.log(string0);
+
 	switch( e.keyCode )
 	{
        case 32:
