@@ -5,7 +5,7 @@ document.onkeydown = function(e)
        case 32:
 	
 //落ちるスピード
-const GAME_SPEED = 800;
+const GAME_SPEED = 1000;
 //フィールドサイズ
 const FIELD_COL = 10;
 const FIELD_ROW = 20;
