@@ -29,7 +29,8 @@ const TETRO_COLORS =
 	"#C5C",			//4紫
 	"#FD2",			//5黄色
 	"#F44",			//6赤
-	"#5B5"			//7緑
+	"#5B5",  		//7緑
+	"#FFFFFF"//8
 ];
 
 const TETRO_TYPES = 
