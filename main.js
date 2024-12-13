@@ -11,7 +11,7 @@ const FIELD_COL = 10;
 const FIELD_ROW = 20;
 
 //ブロック一つのサイズ(ピクセル)
-const BLOCK_SIZE = 40;
+const BLOCK_SIZE = 30;
 
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
@@ -30,7 +30,6 @@ const TETRO_COLORS =
 	"#FD2",			//5黄色
 	"#F44",			//6赤
 	"#5B5",  		//7緑
-	"#FFF"          //8
 ];
 
 const TETRO_TYPES = 
@@ -78,13 +77,7 @@ const TETRO_TYPES =
 		[ 0, 1, 1, 0 ],
 		[ 1, 1, 0, 0 ],
 		[ 0, 0, 0, 0 ]
-	],
-	[
-		[ 1, 1, 1, 0 ],
-		[ 1, 1, 1, 0 ],
-		[ 1, 1, 1, 0 ],
-		[ 0, 0, 0, 0 ]
-	] 
+	]
 ];
 
 //初期位置
