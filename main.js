@@ -5,13 +5,13 @@ document.onkeydown = function(e)
        case 32:
 	
 //落ちるスピード
-const GAME_SPEED = 500;
+const GAME_SPEED = 1000;
 //フィールドサイズ
 const FIELD_COL = 10;
 const FIELD_ROW = 20;
 
 //ブロック一つのサイズ(ピクセル)
-const BLOCK_SIZE = 30;
+const BLOCK_SIZE = 40;
 
 //スクリーンサイズ
 const SCREEN_W = BLOCK_SIZE * FIELD_COL;
@@ -58,7 +58,7 @@ const TETRO_TYPES =
 		[ 0, 1, 0, 0 ],
 		[ 0, 1, 1, 0 ],
 		[ 0, 1, 0, 0 ],
-		[ 0, 0, 0, 0 ]
+		[ 0, 1, 0, 0 ]
 	],
 	[					// 5.O
 		[ 0, 0, 0, 0 ],
@@ -77,6 +77,12 @@ const TETRO_TYPES =
 		[ 0, 1, 1, 0 ],
 		[ 1, 1, 0, 0 ],
 		[ 0, 0, 0, 0 ]
+	],
+	[
+		[1,1,1,0],
+		[1,1,1,0],
+		[1,1,1,0],
+		[0,0,0,0]
 	]
 ];
 
