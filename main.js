@@ -5,7 +5,7 @@ document.onkeydown = function(e)
        case 32:
 	
 //落ちるスピード
-const GAME_SPEED = 1000;
+const GAME_SPEED = 500;
 //フィールドサイズ
 const FIELD_COL = 10;
 const FIELD_ROW = 20;
@@ -30,7 +30,7 @@ const TETRO_COLORS =
 	"#FD2",			//5黄色
 	"#F44",			//6赤
 	"#5B5",  		//7緑
-	"#FFF"//8
+	"#FFF"          //8
 ];
 
 const TETRO_TYPES = 
@@ -80,11 +80,11 @@ const TETRO_TYPES =
 		[ 0, 0, 0, 0 ]
 	],
 	[
-		[ 1, 1, 1, 0],
-		[ 1, 1, 1, 0],
-		[ 1, 1, 1, 0],
-		[ 0, 0, 0, 0]
-	]
+		[ 1, 1, 1, 0 ],
+		[ 1, 1, 1, 0 ],
+		[ 1, 1, 1, 0 ],
+		[ 0, 0, 0, 0 ]
+	] 
 ];
 
 //初期位置
