@@ -11,7 +11,7 @@ const player = {
 };
 
 const enemies = [];
-
+let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
 
@@ -47,6 +47,7 @@ function drawEnemies() {
           bullet.y + bullet.height > enemy.y) {
         enemies.splice(eIndex, 1);
         player.bullets.splice(bIndex, 1);
+        score += 100;
       }
     });
 
@@ -94,6 +95,7 @@ function gameLoop() {
   drawPlayer();
   drawBullets();
   drawEnemies();
+  drawscore();
   spawnEnemy();
 
   requestAnimationFrame(gameLoop);
