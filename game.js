@@ -20,7 +20,7 @@ document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
   const image = new Image();
-  image.src="jiki.png";
+  image.src='jiki.png';
   ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
