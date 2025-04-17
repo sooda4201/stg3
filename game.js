@@ -91,7 +91,7 @@ function update() {
       player.lastShot = Date.now();
     }
   }
-}
+} 
 
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
