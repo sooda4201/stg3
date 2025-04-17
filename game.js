@@ -55,6 +55,11 @@ function drawEnemies() {
     if (enemy.y > canvas.height) enemies.splice(eIndex, 1);
   });
 }
+function drawscore(){
+    ctx.fillStyle = 'white';
+    ctx.font = '20px Arial';
+    ctx.fillText(`Score: ${score}`, 10, 30);    
+}
 
 function spawnEnemy() {
   const now = Date.now();
