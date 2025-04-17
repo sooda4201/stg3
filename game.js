@@ -19,12 +19,8 @@ document.addEventListener('keydown', (e) => keys[e.code] = true);
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
-  ctx.fillStyle = 'cyan';
-  ctx.moveTo(player.x + player.width / 2, player.y); // 頂点（上）
-  ctx.lineTo(player.x, player.y + player.height);    // 左下
+  ctx.drawImage()
   ctx.fillRect(player.x, player.y, player.width, player.height);
-  ctx.closePath();
-  ctx.fill();
 }
 
 function drawBullets() {
