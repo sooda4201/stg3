@@ -19,7 +19,7 @@ document.addEventListener('keydown', (e) => keys[e.code] = true);
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
-  ctx.drawImage()
+  ctx.drawImage();
   ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
