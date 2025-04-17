@@ -55,7 +55,7 @@ function drawEnemies() {
     if (enemy.y > canvas.height) enemies.splice(eIndex, 1);
   });
 }
-function drawscore(){
+function drawScore(){
     ctx.fillStyle = 'white';
     ctx.font = '20px Arial';
     ctx.fillText(`Score: ${score}`, 10, 30);    
@@ -100,7 +100,7 @@ function gameLoop() {
   drawPlayer();
   drawBullets();
   drawEnemies();
-  drawscore();
+  drawScore();
   spawnEnemy();
 
   requestAnimationFrame(gameLoop);
