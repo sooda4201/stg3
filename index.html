@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>テトリス</title>
-  </head>
-  <body>
-    <biv id="title">
-      <biv id="tetorisu">テトリス</biv>
-    </biv>
-    <biv id="scoreContainer">
-      <biv id="scoreDisplay">スコア：０</biv>
-    </biv>
-    <link rel="stylesheet" href="style.css">
-    <canvas id="can"></canvas> 
-    <script src="main.js" onclick="startGame()">START</script>
-    ・スペースでスタート/回転 ・十字キーで移動 ・Rでリセット
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>シューティングゲーム</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #111;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="480" height="640"></canvas>
+  <script src="game.js"></script>
+</body>
 </html>
