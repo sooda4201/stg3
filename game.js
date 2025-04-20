@@ -2,8 +2,6 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 const player = {
-  x: canvas.width / 2 - 15,
-  y: canvas.height - 60,
   width: 30,
   height: 30,
   speed: 5,
