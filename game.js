@@ -4,7 +4,6 @@ const ctx = canvas.getContext('2d');
 const player = {
   x: canvas.width / 2 - 15,
   y: canvas.height - 60,
-  image.src='jiki.png';
   speed: 5,
   bullets: []
 };
