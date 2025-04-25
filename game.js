@@ -44,7 +44,7 @@ function drawBullets() {
   player.bullets.forEach((bullet, index) => {
     bullet.y -= bullet.speed;
     //弾を画像で描画
-    ctx.drawImage(tamaImg, bullet.x, bullet.y, bullet.width, bullet.height);
+    ctx.drawImage(tamaImg, bullet.x, bullet.y, bullet.width*2, bullet.height*2 );
     // 画面外なら削除
     if (bullet.y < 0) player.bullets.splice(index, 1);
   });
