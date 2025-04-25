@@ -25,7 +25,8 @@ let gameOver=false;
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
 
-  if (gameOver && e.code === 'スペース') {
+  if (gameOver && e.code === 'Space') {
+
     resetGame();
   }
 });
