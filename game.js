@@ -19,6 +19,7 @@ const player = {
   bullets: []
 };
 
+const enemyBullets = [];
 const enemies = [];
 let score=0;
 let keys = {};
@@ -78,8 +79,42 @@ function drawEnemies() {
     enemy.y + enemy.height > player.y) {
    gameOver = true;
  }
+
+ if (Math.random() < 0.01) { // 1%の確率で発射（毎フレーム）
+  enemyBullets.push({
+    x: enemy.x + enemy.width / 2 - 2.5,
+    y: enemy.y + enemy.height,
+    width: 5,
+    height: 10,
+    speed: 4
   });
 }
+  });
+}
+
+function drawEnemyBullets() {
+  ctx.fillStyle = 'orange';
+  enemyBullets.forEach((bullet, index) => {
+    bullet.y += bullet.speed;
+    ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+
+    // 自機との当たり判定
+    if (
+      bullet.x < player.x + player.width &&
+      bullet.x + bullet.width > player.x &&
+      bullet.y < player.y + player.height &&
+      bullet.y + bullet.height > player.y
+    ) {
+      gameOver = true;
+    }
+
+    // 画面外で削除
+    if (bullet.y > canvas.height) {
+      enemyBullets.splice(index, 1);
+    }
+  });
+}
+
 
 function spawnEnemy() {
   const now = Date.now();
@@ -153,6 +188,7 @@ function gameLoop() {
   drawPlayer();
   drawBullets();
   drawEnemies();
+  drawEnemyBullets(); 
   drawScore();
   spawnEnemy();
 
