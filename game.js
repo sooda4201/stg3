@@ -22,7 +22,13 @@ let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
 
-document.addEventListener('keydown', (e) => keys[e.code] = true);
+document.addEventListener('keydown', (e) => {
+  keys[e.code] = true;
+
+  if (gameOver && e.code === '82') {
+    resetGame();
+  }
+});
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
@@ -96,14 +102,14 @@ function drawGameOver() {
   ctx.textAlign = 'center';
   ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
   ctx.font = '20px Arial';
-  ctx.fillText('Click to Retry', canvas.width / 2, canvas.height / 2 + 40);
+  ctx.fillText('Press「R」Click to Retry', canvas.width / 2, canvas.height / 2 + 40);
 }
 
-canvas.addEventListener('click', () => {
+/*canvas.addEventListener('click', () => {
   if (gameOver) {
     resetGame();
   }
-});
+});*/
 
 function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
