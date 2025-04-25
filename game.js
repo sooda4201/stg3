@@ -80,7 +80,7 @@ function drawEnemies() {
    gameOver = true;
  }
 
- if (Math.random() < 0.01) { // 1%の確率で発射（毎フレーム）
+ if (Math.random() < 0.001) { // 1%の確率で発射（毎フレーム）
   enemyBullets.push({
     x: enemy.x + enemy.width / 2 - 2.5,
     y: enemy.y + enemy.height,
