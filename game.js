@@ -58,17 +58,17 @@ function drawEnemies() {
       }
     });
 
-          //自機との当たり判定
-          if (enemy.x < player.x + player.width &&
-            enemy.x + enemy.width > player.x &&
-            enemy.y < player.y + player.height &&
-            enemy.y + enemy.height > player.y) {
-          gameOver = true;
-         }
-
     // 画面外なら削除
     if (enemy.y > canvas.height) enemies.splice(eIndex, 1);
   });
+
+            //自機との当たり判定
+            if (enemy.x < player.x + player.width &&
+              enemy.x + enemy.width > player.x &&
+              enemy.y < player.y + player.height &&
+              enemy.y + enemy.height > player.y) {
+            gameOver = true;
+           }
 }
 function drawScore(){
     ctx.fillStyle = 'white';
