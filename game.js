@@ -149,7 +149,7 @@ function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
   player.bullets = [];
-  enemies.bullets = [];
+  enemy.bullets = [];
   enemies.length = 0;
   score = 0;
   gameOver = false;
@@ -160,7 +160,7 @@ function resetGame() {
 function drawScore(){
   ctx.fillStyle = 'white';
   ctx.font = '20px Arial';
-  ctx.fillText(`Score: ${score}`, 10, 30);    
+  ctx.fillText(`Score: ${score}`, 10, 30);
 }
 
 function update() {
