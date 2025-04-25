@@ -90,7 +90,27 @@ function drawGameOver() {
   ctx.font = '40px Arial';
   ctx.textAlign = 'center';
   ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
+  ctx.font = '20px Arial';
+  ctx.fillText('Click to Retry', canvas.width / 2, canvas.height / 2 + 40);
 }
+
+function resetGame() {
+  player.x = canvas.width / 2 - player.width / 2;
+  player.y = canvas.height - 60;
+  player.bullets = [];
+  enemies.length = 0;
+  score = 0;
+  gameOver = false;
+  lastEnemySpawn = 0;
+  gameLoop(); // もう一度ループ開始
+}
+
+canvas.addEventListener('click', () => {
+  if (gameOver) {
+    resetGame();
+  }
+});
+
 
 function update() {
   if (keys['ArrowLeft'] && player.x > 0) player.x -= player.speed;
