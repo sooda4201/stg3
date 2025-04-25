@@ -5,7 +5,7 @@ const playerImg = new Image();
 playerImg.src = 'jiki.png';
 
 const player = {
-  x: canvas.width / 2 - 15,
+  x: canvas.width / 2 - 20,
   y: canvas.height - 60,
   width: 40,
   height: 40,
