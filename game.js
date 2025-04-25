@@ -149,7 +149,7 @@ function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
   player.bullets = [];
-  enemies.bullets = [];
+  enemyBullets = [];
   enemies.length = 0;
   score = 0;
   gameOver = false;
