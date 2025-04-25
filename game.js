@@ -77,6 +77,7 @@ function drawEnemies() {
  }
   });
 }
+
 function drawScore(){
     ctx.fillStyle = 'white';
     ctx.font = '20px Arial';
