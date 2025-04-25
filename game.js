@@ -149,5 +149,6 @@ function gameLoop() {
 }else{
   drawGameOver();
 }
+}
 
 gameLoop();
