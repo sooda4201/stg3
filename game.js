@@ -98,6 +98,12 @@ function drawGameOver() {
   ctx.fillText('Click to Retry', canvas.width / 2, canvas.height / 2 + 40);
 }
 
+canvas.addEventListener('click', () => {
+  if (gameOver) {
+    resetGame();
+  }
+});
+
 function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
@@ -108,12 +114,6 @@ function resetGame() {
   lastEnemySpawn = 0;
   gameLoop(); // もう一度ループ開始
 }
-
-canvas.addEventListener('click', () => {
-  if (gameOver) {
-    resetGame();
-  }
-});
 
 
 function update() {
