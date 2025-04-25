@@ -102,7 +102,7 @@ function drawGameOver() {
   ctx.textAlign = 'center';
   ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
   ctx.font = '20px Arial';
-  ctx.fillText('Press スペース Click to Retry', canvas.width / 2, canvas.height / 2 + 40);
+  ctx.fillText('Press Space to Retry', canvas.width / 2, canvas.height / 2 + 40);
 }
 
 /*canvas.addEventListener('click', () => {
