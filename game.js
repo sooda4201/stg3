@@ -7,6 +7,9 @@ playerImg.src = 'jiki.png';
 const enemiesImg=new Image();
 enemiesImg.src='teki.png';
 
+const tamaImg=new Image();
+tamaImg.src='tamapng';
+
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 60,
@@ -37,10 +40,9 @@ function drawPlayer() {
 }
 
 function drawBullets() {
-  ctx.fillStyle = 'yellow';
   player.bullets.forEach((bullet, index) => {
     bullet.y -= bullet.speed;
-    ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+    ctx.drawImage(tamaImg, bullet.x, bullet.y, bullet.width, bullet.height);
     // 画面外なら削除
     if (bullet.y < 0) player.bullets.splice(index, 1);
   });
