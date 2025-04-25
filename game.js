@@ -1,11 +1,14 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
+const playerImg = new Image();
+playerImg.src = 'jiki.png';
+
 const player = {
   x: canvas.width / 2 - 15,
   y: canvas.height - 60,
-  width: 30,
-  height: 30,
+  width: 40,
+  height: 40,
   speed: 5,
   bullets: []
 };
@@ -19,7 +22,7 @@ document.addEventListener('keydown', (e) => keys[e.code] = true);
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
-  ctx.fillRect(player.x, player.y, player.width, player.height);
+  ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
 }
 
 function drawBullets() {
