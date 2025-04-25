@@ -78,12 +78,6 @@ function drawEnemies() {
   });
 }
 
-function drawScore(){
-    ctx.fillStyle = 'white';
-    ctx.font = '20px Arial';
-    ctx.fillText(`Score: ${score}`, 10, 30);    
-}
-
 function spawnEnemy() {
   const now = Date.now();
   if (now - lastEnemySpawn > 1000) {
@@ -124,6 +118,11 @@ function resetGame() {
   gameLoop(); // もう一度ループ開始
 }
 
+function drawScore(){
+  ctx.fillStyle = 'white';
+  ctx.font = '20px Arial';
+  ctx.fillText(`Score: ${score}`, 10, 30);    
+}
 
 function update() {
   if (keys['ArrowLeft'] && player.x > 0) player.x -= player.speed;
