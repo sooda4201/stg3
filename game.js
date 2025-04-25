@@ -44,7 +44,7 @@ function drawEnemies() {
     enemy.y += enemy.speed;
 
     // 敵を画像で描画
-    ctx.drawImage(enemyImg, enemy.x, enemy.y, enemy.width, enemy.height);
+    ctx.drawImage(enemiesImg, enemy.x, enemy.y, enemy.width, enemy.height);
 
     // 弾と衝突判定
     player.bullets.forEach((bullet, bIndex) => {
