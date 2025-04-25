@@ -4,6 +4,9 @@ const ctx = canvas.getContext('2d');
 const playerImg = new Image();
 playerImg.src = 'jiki.png';
 
+const enemiesImg=new Image();
+enemiesImg.src='teki.png';
+
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 60,
@@ -37,10 +40,11 @@ function drawBullets() {
 }
 
 function drawEnemies() {
-  ctx.fillStyle = 'red';
   enemies.forEach((enemy, eIndex) => {
     enemy.y += enemy.speed;
-    ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+
+    // 敵を画像で描画
+    ctx.drawImage(enemyImg, enemy.x, enemy.y, enemy.width, enemy.height);
 
     // 弾と衝突判定
     player.bullets.forEach((bullet, bIndex) => {
