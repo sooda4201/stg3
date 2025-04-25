@@ -57,6 +57,7 @@ function drawEnemies() {
         score += 100;
       }
 
+      //自機との当たり判定
       if (enemy.x < player.x + player.width &&
         enemy.x + enemy.width > player.x &&
         enemy.y < player.y + player.height &&
