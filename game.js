@@ -8,7 +8,7 @@ const enemiesImg=new Image();
 enemiesImg.src='teki.png';
 
 const tamaImg=new Image();
-tamaImg.src='tamapng';
+tamaImg.src='tama.png';
 
 const player = {
   x: canvas.width / 2 - 20,
