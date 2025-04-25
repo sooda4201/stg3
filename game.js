@@ -17,6 +17,7 @@ const enemies = [];
 let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
+let gameOver=false;
 
 document.addEventListener('keydown', (e) => keys[e.code] = true);
 document.addEventListener('keyup', (e) => keys[e.code] = false);
@@ -51,6 +52,13 @@ function drawEnemies() {
         player.bullets.splice(bIndex, 1);
         score += 100;
       }
+
+      if (enemy.x < player.x + player.width &&
+        enemy.x + enemy.width > player.x &&
+        enemy.y < player.y + player.height &&
+        enemy.y + enemy.height > player.y) {
+      gameOver = true;
+     }
     });
 
     // 画面外なら削除
@@ -77,6 +85,13 @@ function spawnEnemy() {
   }
 }
 
+function drawGameOver() {
+  ctx.fillStyle = 'white';
+  ctx.font = '40px Arial';
+  ctx.textAlign = 'center';
+  ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
+}
+
 function update() {
   if (keys['ArrowLeft'] && player.x > 0) player.x -= player.speed;
   if (keys['ArrowRight'] && player.x + player.width < canvas.width) player.x += player.speed;
@@ -98,6 +113,7 @@ function update() {
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  if(!gameOver){
   update();
   drawPlayer();
   drawBullets();
@@ -106,6 +122,8 @@ function gameLoop() {
   spawnEnemy();
 
   requestAnimationFrame(gameLoop);
+}else{
+  drawGameOver();
 }
 
 gameLoop();
