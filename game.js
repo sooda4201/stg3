@@ -10,6 +10,9 @@ enemiesImg.src='teki.png';
 const tamaImg=new Image();
 tamaImg.src='tama.png';
 
+const hosiImg=new Image();
+hosiImg.src='hosipng';
+
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 60,
@@ -37,7 +40,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 function drawStar(){
-  ctx.drawImage()
+  ctx.drawImage(hosiImg,star.x,star.y,star.width,star.height);
 }
 
 document.addEventListener('keyup', (e) => keys[e.code] = false);
