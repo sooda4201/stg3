@@ -24,7 +24,10 @@ const player = {
 
 const enemyBullets = [];
 const enemies = [];
-const star=[];
+const star={
+  x: canvas.width / 2 - 20,
+  y: canvas.height - 60,
+};
 let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
