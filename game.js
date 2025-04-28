@@ -10,6 +10,9 @@ enemiesImg.src='teki.png';
 const tamaImg=new Image();
 tamaImg.src='tama.png';
 
+const bossImg=new Image();
+bossImg.src='boss.png';
+
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 60,
