@@ -24,10 +24,6 @@ const player = {
 
 const enemyBullets = [];
 const enemies = [];
-const star={
-  x: canvas.width / 2 - 20,
-  y: canvas.height - 60,
-};
 let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
@@ -42,9 +38,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-function drawStar(){
-  ctx.drawImage(hosiImg,star.x,star.y,star.width,star.height);
-}
+
 
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
