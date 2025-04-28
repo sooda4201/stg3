@@ -21,6 +21,7 @@ const player = {
 
 const enemyBullets = [];
 const enemies = [];
+const star=[];
 let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
@@ -34,6 +35,11 @@ document.addEventListener('keydown', (e) => {
     resetGame();
   }
 });
+
+function drawStar(){
+  ctx.drawImage()
+}
+
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
 function drawPlayer() {
