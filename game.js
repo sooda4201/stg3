@@ -39,7 +39,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 //星の描画
-function drawStar{
+function drawStar(){
   ctx.fillStyle='#f4f4f4';
   star.forEach((star,index)=>{
     star.y -= star.speed;
