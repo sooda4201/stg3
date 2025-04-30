@@ -21,7 +21,7 @@ const player = {
   speed: 5,
   bullets: []
 };
-
+const star = [];
 const enemyBullets = [];
 const enemies = [];
 let score=0;
@@ -38,7 +38,13 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-
+function drawStar{
+  ctx.fillStyle='white';
+  star.forEach((star,index)=>{
+    star.y -= star.speed;
+    if (star.y < 0) star.splice(index, 1);
+  });
+}
 
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
