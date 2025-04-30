@@ -207,6 +207,7 @@ function gameLoop() {
 
   if(!gameOver){
   update();
+  drawStar();
   drawPlayer();
   drawBullets();
   drawEnemies();
