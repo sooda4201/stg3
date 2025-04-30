@@ -42,7 +42,7 @@ document.addEventListener('keydown', (e) => {
 function drawStar(){
   ctx.fillStyle='#f4f4f4';
   star.forEach((star,index)=>{
-    star.y -= star.speed;
+    star.y += star.speed;
     //画面外なら削除
     if (star.y < 0) star.splice(index, 1);
   });
