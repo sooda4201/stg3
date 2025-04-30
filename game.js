@@ -38,20 +38,24 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+//星の描画
 function drawStar{
   ctx.fillStyle='white';
   star.forEach((star,index)=>{
     star.y -= star.speed;
+    //画面外なら削除
     if (star.y < 0) star.splice(index, 1);
   });
 }
 
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
+//自機の描画
 function drawPlayer() {
   ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
 }
 
+//弾の描画
 function drawBullets() {
   player.bullets.forEach((bullet, index) => {
     bullet.y -= bullet.speed;
@@ -62,6 +66,7 @@ function drawBullets() {
   });
 }
 
+//敵の描画
 function drawEnemies() {
   enemies.forEach((enemy, eIndex) => {
     enemy.y += enemy.speed;
@@ -104,6 +109,7 @@ function drawEnemies() {
   });
 }
 
+//敵の弾の描画
 function drawEnemyBullets() {
   ctx.fillStyle = 'orange';
   enemyBullets.forEach((bullet, index) => {
@@ -128,6 +134,7 @@ function drawEnemyBullets() {
 }
 
 
+//敵の出現
 function spawnEnemy() {
   const now = Date.now();
   if (now - lastEnemySpawn > 1000) {
@@ -142,6 +149,7 @@ function spawnEnemy() {
   }
 }
 
+//ゲームオーバー画面
 function drawGameOver() {
   ctx.fillStyle = 'white';
   ctx.font = '40px Arial';
@@ -157,6 +165,7 @@ function drawGameOver() {
   }
 });*/
 
+//リセット
 function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
@@ -168,6 +177,7 @@ function resetGame() {
   gameLoop(); // もう一度ループ開始
 }
 
+//スコアの表示
 function drawScore(){
   ctx.fillStyle = 'white';
   ctx.font = '20px Arial';
