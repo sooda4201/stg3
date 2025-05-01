@@ -97,8 +97,8 @@ function drawEnemies() {
     enemy.y + enemy.height > player.y) {
    gameOver = true;
  }
-
- if (Math.random() < 0.002) { // 1%の確率で発射（毎フレーム）
+//弾の発射
+ if (Math.random() < 0.002) { // 0.2%の確率で発射（毎フレーム）
   enemyBullets.push({
     x: enemy.x + enemy.width / 2 - 2.5,
     y: enemy.y + enemy.height,
@@ -204,9 +204,11 @@ function update() {
   }
 } 
 
+//ゲームループ
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  //ゲームオーバーじゃなければ
   if(!gameOver){
   update();
   drawStar();
@@ -218,7 +220,7 @@ function gameLoop() {
   spawnEnemy();
 
   requestAnimationFrame(gameLoop);
-}else{
+}else{  //ゲームオーバーならば
   drawGameOver();
 }
 }
