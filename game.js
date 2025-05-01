@@ -41,7 +41,7 @@ document.addEventListener('keydown', (e) => {
 //星の描画
 function drawStar(){
   ctx.fillStyle='#f4f4f4';
-  ctx.fillRect(star,0,0,5,5);
+  ctx.fillRect(star.x, star.y, star.width, star.height);
   star.forEach((star,index)=>{
     star.y += star.speed;
     //画面外なら削除
