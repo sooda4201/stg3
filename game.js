@@ -214,10 +214,10 @@ function update() {
 //ゲームループ
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  //ゲームストップじゃなければ 
-  if(!gamestop){
   //ゲームオーバーじゃなければ
   if(!gameOver){
+  //ゲームストップじゃなければ 
+  if(!gamestop){
   update();
   drawStar();
   drawPlayer();
