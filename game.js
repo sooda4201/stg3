@@ -46,6 +46,12 @@ document.addEventListener('keydown', (e) => {
     ctx.fillText('Pose', canvas.width / 2, canvas.height / 2);
     ctx.font = '20px Arial';
     ctx.fillText('Press p to Retry', canvas.width / 2, canvas.height / 2 + 40);
+    drawStar();
+    drawPlayer();
+    drawBullets();
+    drawEnemies();
+    drawEnemyBullets(); 
+    drawScore();
   }
 
 });
