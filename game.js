@@ -32,11 +32,12 @@ let gamestop=false;
 
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
-
+ //スペースでゲームリセット
   if (gameOver && e.code === 'Space') {
 
     resetGame();
   }
+  //「ｐ」で一時停止
   if (e.key === 'p' || e.key === 'P') {
     gamestop = !gamestop;
   }
@@ -213,6 +214,7 @@ function update() {
 //ゲームループ
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ゲームストップじゃなければ 
   if(!gamestop){
   //ゲームオーバーじゃなければ
   if(!gameOver){
