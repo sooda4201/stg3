@@ -40,6 +40,12 @@ document.addEventListener('keydown', (e) => {
   //「ｐ」で一時停止
   if (e.key === 'p' || e.key === 'P') {
     gamestop = !gamestop;
+    ctx.fillStyle = 'white';
+    ctx.font = '40px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('Pose', canvas.width / 2, canvas.height / 2);
+    ctx.font = '20px Arial';
+    ctx.fillText('Press p to Retry', canvas.width / 2, canvas.height / 2 + 40);
   }
 
 });
@@ -173,7 +179,7 @@ function drawGameOver() {
   }
 });*/
 
-//リセット
+//ゲームリセット
 function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
