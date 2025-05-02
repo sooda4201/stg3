@@ -28,6 +28,7 @@ let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
+let isPaused=false;
 
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
@@ -36,6 +37,10 @@ document.addEventListener('keydown', (e) => {
 
     resetGame();
   }
+  if (e.key === 'p' || e.key === 'P') {
+    isPaused = !isPaused;
+  }
+
 });
 
 //星の描画
@@ -208,7 +213,7 @@ function update() {
 //ゲームループ
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+  if(!isPaused){
   //ゲームオーバーじゃなければ
   if(!gameOver){
   update();
@@ -223,6 +228,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }else{  //ゲームオーバーならば
   drawGameOver();
+}
 }
 }
 
