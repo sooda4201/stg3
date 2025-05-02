@@ -224,12 +224,12 @@ function gameLoop() {
   drawEnemyBullets(); 
   drawScore();
   spawnEnemy();
-
+  }
   requestAnimationFrame(gameLoop);
 }else{  //ゲームオーバーならば
   drawGameOver();
 }
 }
-}
+
 
 gameLoop();
