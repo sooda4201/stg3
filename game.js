@@ -126,7 +126,7 @@ function drawEnemies() {
 function drawEnemyBullets() {
   ctx.fillStyle = 'orange';
   enemyBullets.forEach((bullet, index) => {
-    bullet.y += bullet.speed;
+    bullet.y += bullet.speed*1.2;
     ctx.fillRect(bullet.x, bullet.y, bullet.width*0.8, bullet.height*0.8);
 
     // 自機との当たり判定
