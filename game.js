@@ -28,7 +28,7 @@ let score=0;
 let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
-let isPaused=false;
+let gamestop=false;
 
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
@@ -38,7 +38,7 @@ document.addEventListener('keydown', (e) => {
     resetGame();
   }
   if (e.key === 'p' || e.key === 'P') {
-    isPaused = !isPaused;
+    gamestop = !gamestop;
   }
 
 });
@@ -213,7 +213,7 @@ function update() {
 //ゲームループ
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if(!isPaused){
+  if(!gamestop){
   //ゲームオーバーじゃなければ
   if(!gameOver){
   update();
