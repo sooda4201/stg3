@@ -10,9 +10,6 @@ enemiesImg.src='teki.png';
 const tamaImg=new Image();
 tamaImg.src='tama.png';
 
-const bossImg=new Image();
-bossImg.src='boss.png';
-
 let boss = null;
 const bossImg = new Image();
 bossImg.src = 'boss.png'; 
