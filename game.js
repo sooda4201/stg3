@@ -243,7 +243,6 @@ function gameLoop() {
   if(!gamestop){
   drawStars(); 
   update();
-  drawStar();
   drawPlayer();
   drawBullets();
   drawEnemies();
