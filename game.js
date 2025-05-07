@@ -238,10 +238,10 @@ function drawBoss() {
       if (boss.hp <= 0) {
         boss = null;
         score += 1000;
+        gameLoop();
         // ここでクリア画面表示とかもできる
       }
     }
-    gameLoop();
   });
 
   // 自機との接触でゲームオーバー
