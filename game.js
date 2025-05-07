@@ -13,6 +13,11 @@ tamaImg.src='tama.png';
 const bossImg=new Image();
 bossImg.src='boss.png';
 
+let boss = null;
+
+const bossImg = new Image();
+bossImg.src = 'boss.png'; // 用意したボス画像ファイル
+
 const player = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 60,
@@ -191,6 +196,67 @@ function drawGameOver() {
   drawScore();
 }
 
+//ボスの出現
+function checkBossAppear() {
+  if (!boss && score >= 1000) {
+    boss = {
+      x: canvas.width / 2 - 60,
+      y: 50,
+      width: 120,
+      height: 60,
+      hp: 30,
+      speed: 2,
+      direction: 1
+    };
+  }
+}
+
+//ボスの描画
+function drawBoss() {
+  if (!boss) return;
+
+  // 横移動（バウンド）
+  boss.x += boss.speed * boss.direction;
+  if (boss.x < 0 || boss.x + boss.width > canvas.width) {
+    boss.direction *= -1;
+  }
+
+  // 画像で描画（画像なしなら fillRect でもOK）
+  ctx.drawImage(bossImg, boss.x, boss.y, boss.width, boss.height);
+
+  // HPバー
+  ctx.fillStyle = 'red';
+  ctx.fillRect(boss.x, boss.y - 10, boss.width, 5);
+  ctx.fillStyle = 'lime';
+  ctx.fillRect(boss.x, boss.y - 10, boss.width * (boss.hp / 30), 5);
+
+  // 弾との当たり判定
+  player.bullets.forEach((bullet, bIndex) => {
+    if (bullet.x < boss.x + boss.width &&
+        bullet.x + bullet.width > boss.x &&
+        bullet.y < boss.y + boss.height &&
+        bullet.y + bullet.height > boss.y) {
+      boss.hp--;
+      player.bullets.splice(bIndex, 1);
+
+      if (boss.hp <= 0) {
+        boss = null;
+        score += 1000;
+        // ここでクリア画面表示とかもできる
+      }
+    }
+  });
+
+  // 自機との接触でゲームオーバー
+  if (player.x < boss.x + boss.width &&
+      player.x + player.width > boss.x &&
+      player.y < boss.y + boss.height &&
+      player.y + player.height > boss.y) {
+    gameOver = true;
+  }
+}
+
+
 /*canvas.addEventListener('click', () => {
   if (gameOver) {
     resetGame();
@@ -246,6 +312,8 @@ function gameLoop() {
   drawPlayer();
   drawBullets();
   drawEnemies();
+  checkBossAppear();     
+  drawBoss();   
   drawEnemyBullets(); 
   drawScore();
   spawnEnemy();
