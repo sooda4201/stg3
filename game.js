@@ -238,8 +238,8 @@ function drawBoss() {
       if (boss.hp <= 0) {
         boss = null;
         score += 1000;
-        gameLoop();
         // ここでクリア画面表示とかもできる
+        gameLoop();
       }
     }
   });
@@ -249,7 +249,6 @@ function drawBoss() {
       player.x + player.width > boss.x &&
       player.y < boss.y + boss.height &&
       player.y + player.height > boss.y) {
-    gameOver = true;
   }
 }
 
