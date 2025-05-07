@@ -14,9 +14,8 @@ const bossImg=new Image();
 bossImg.src='boss.png';
 
 let boss = null;
-
 const bossImg = new Image();
-bossImg.src = 'boss.png'; // 用意したボス画像ファイル
+bossImg.src = 'boss.png'; 
 
 const player = {
   x: canvas.width / 2 - 20,
