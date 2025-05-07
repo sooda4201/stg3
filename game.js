@@ -21,7 +21,7 @@ const player = {
   speed: 5,
   bullets: []
 };
-const star = [];
+const stars = [];
 const enemyBullets = [];
 const enemies = [];
 let score=0;
@@ -50,16 +50,34 @@ document.addEventListener('keydown', (e) => {
 
 });
 
-//星の描画
-function drawStar(){
-  ctx.fillStyle='#f4f4f4';
-  ctx.fillRect(star.x, star.y, star.width, star.height);
-  star.forEach((star,index)=>{
-    star.y += star.speed;
-    //画面外なら削除
-    if (star.y < 0) star.splice(index, 1);
+//星のランダム
+for (let i = 0; i < 100; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 2 + 1, // 星の大きさ：1〜3px
+    speed: Math.random() * 0.5 + 0.2 // 星の速さ
   });
 }
+
+//星の描画
+function drawStars() {
+  ctx.fillStyle = 'white';
+  stars.forEach((star) => {
+    star.y += star.speed;
+
+    // 星が下に行ったら上に戻す
+    if (star.y > canvas.height) {
+      star.y = 0;
+      star.x = Math.random() * canvas.width;
+    }
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
 
 document.addEventListener('keyup', (e) => keys[e.code] = false);
 
@@ -223,6 +241,7 @@ function gameLoop() {
   if(!gameOver){
   //ゲームストップじゃなければ 
   if(!gamestop){
+  drawStars(); 
   update();
   drawStar();
   drawPlayer();
@@ -234,6 +253,7 @@ function gameLoop() {
   }
   requestAnimationFrame(gameLoop);
 }else{  //ゲームオーバーならば
+  drawStars(); 
   drawGameOver();
 }
 }
