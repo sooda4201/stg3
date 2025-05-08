@@ -200,7 +200,7 @@ function checkBossAppear() {
       y: 50,
       width: 100,
       height: 60,
-      hp: 20,
+      hp: 30,
       speed: 2,
       direction: 1
     };
