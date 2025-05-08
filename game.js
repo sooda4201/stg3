@@ -269,7 +269,7 @@ function drawbossbullets(){
   ctx.fillStyle='red';
   bossbullets.forEach((bullet,index)=> {
     bullet.y += bullet.speed*1.2;
-    ctx.fillRect(bullet.x, bullet.y, bullet.width*0.8, bullet.height*0.8);
+    ctx.fillRect(bullet.x, bullet.y, bullet.width*3, bullet.height*3);
 
     // 自機との当たり判定
     if (
@@ -283,7 +283,7 @@ function drawbossbullets(){
     
         // 画面外で削除
         if (bullet.y > canvas.height) {
-          enemyBullets.splice(index, 1);
+          bossbullets.splice(index, 1);
         }
       });
     }
