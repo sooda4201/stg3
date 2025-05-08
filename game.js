@@ -239,7 +239,6 @@ function drawBoss() {
         boss = null;
         score += 500;
         // ここでクリア画面表示とかもできる
-        gameLoop();
       }
     }
   });
