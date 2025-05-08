@@ -237,7 +237,7 @@ function drawBoss() {
 
       if (boss.hp <= 0) {
         boss = null;
-        score += 1000;
+        score += 500;
         // ここでクリア画面表示とかもできる
         gameLoop();
       }
