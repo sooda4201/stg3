@@ -23,6 +23,7 @@ const player = {
   bullets: []
 };
 const stars = [];
+const bossbullets=[]; 
 const enemyBullets = [];
 const enemies = [];
 let score=0;
@@ -221,7 +222,6 @@ function drawBoss() {
 
   ctx.drawImage(bossImg, boss.x, boss.y, boss.width, boss.height);
 
-
   // HPバー
   ctx.fillStyle = 'red';
   ctx.fillRect(boss.x, boss.y - 10, boss.width, 5);
@@ -253,6 +253,30 @@ function drawBoss() {
       player.y + player.height > boss.y) {
   }
 }
+
+//ボスの弾の描画
+function drawbossbullets(){
+  ctx.fillStyle='red';
+  bossbullets.forEach((bullet,index)=> {
+    bullet.y += bullet.speed*1.2;
+    ctx.fillRect(bullet.x, bullet.y, bullet.width*0.8, bullet.height*0.8);
+
+    // 自機との当たり判定
+    if (
+    bullet.x < player.x + player.width &&
+    bullet.x + bullet.width > player.x &&
+    bullet.y < player.y + player.height &&
+    bullet.y + bullet.height > player.y
+        ) {
+          gameOver = true;
+        }
+    
+        // 画面外で削除
+        if (bullet.y > canvas.height) {
+          enemyBullets.splice(index, 1);
+        }
+      });
+    }
 
 
 /*canvas.addEventListener('click', () => {
