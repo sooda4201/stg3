@@ -40,7 +40,7 @@ document.addEventListener('keydown', (e) => {
     resetGame();
   }
   //「ｐ」で一時停止
-  if (e.key === 'p' || e.key === 'P') {
+  if (e.key === 'p' || e.key === 'p') {
     ctx.fillStyle = 'white';
     ctx.font = '40px Arial';
     ctx.textAlign = 'center';
