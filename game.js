@@ -265,6 +265,7 @@ function resetGame() {
   player.y = canvas.height - 60;
   player.bullets = [];
   enemies.length = 0;
+  boss = null;
   score = 0;
   gameOver = false;
   lastEnemySpawn = 0;
