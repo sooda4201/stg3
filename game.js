@@ -239,7 +239,7 @@ function drawBoss() {
       player.x + player.width > boss.x &&
       player.y < boss.y + boss.height &&
       player.y + player.height > boss.y) {
-        gameLoop();
+        gameOver=true;
   }
   //弾の発射
  if (Math.random() < 0.002) { // 0.2%の確率で発射（毎フレーム）
