@@ -206,6 +206,7 @@ function checkBossAppear() {
       direction: 1
     };
   }
+  gameLoop();
 }
 
 //ボスの描画
@@ -241,7 +242,6 @@ function drawBoss() {
         boss = null;
         score += 500;
         // ここでクリア画面表示とかもできる
-        gameLoop();
       }
     }
   });
