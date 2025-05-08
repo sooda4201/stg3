@@ -206,7 +206,6 @@ function checkBossAppear() {
       direction: 1
     };
   }
-  gameLoop();
 }
 
 //ボスの描画
