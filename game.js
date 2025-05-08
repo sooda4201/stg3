@@ -194,13 +194,13 @@ function drawGameOver() {
 
 //ボスの出現
 function checkBossAppear() {
-  if (!boss && score >= 1000) {
+  if (!boss && score >= 2000) {
     boss = {
       x: canvas.width / 2 - 60,
       y: 50,
-      width: 120,
+      width: 100,
       height: 60,
-      hp: 30,
+      hp: 20,
       speed: 2,
       direction: 1
     };
