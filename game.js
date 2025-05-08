@@ -63,7 +63,7 @@ for (let i = 0; i < 100; i++) {
 
 //星の描画
 function drawStars() {
-  ctx.fillStyle = 'white';
+  ctx.fillStyle ='rgb(223, 223, 223)';
   stars.forEach((star) => {
     star.y += star.speed;
 
@@ -220,6 +220,7 @@ function drawBoss() {
   }
 
   ctx.drawImage(bossImg, boss.x, boss.y, boss.width, boss.height);
+
 
   // HPバー
   ctx.fillStyle = 'red';
