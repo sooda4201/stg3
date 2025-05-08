@@ -217,7 +217,6 @@ function drawBoss() {
     boss.direction *= -1;
   }
 
-  // 画像で描画（画像なしなら fillRect でもOK）
   ctx.drawImage(bossImg, boss.x, boss.y, boss.width, boss.height);
 
   // HPバー
