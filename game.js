@@ -210,6 +210,8 @@ function checkBossAppear() {
 //ボスの描画
 function drawBoss() {
   if (!boss) return;
+  lastEnemySpawn=0;
+  enemies.length=0;
 
   // 横移動（バウンド）
   boss.x += boss.speed * boss.direction;
@@ -238,6 +240,7 @@ function drawBoss() {
         boss = null;
         score += 500;
         // ここでクリア画面表示とかもできる
+        gameLoop();
       }
     }
   });
