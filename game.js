@@ -64,7 +64,7 @@ for (let i = 0; i < 100; i++) {
 
 //星の描画
 function drawStars(){
-  ctx.fillStyle ='rgb(255, 255, 255)';
+  ctx.fillStyle = 'rgb(255, 255, 255)';
   stars.forEach((star) => {
     star.y += star.speed;
 
