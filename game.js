@@ -24,7 +24,7 @@ const player = {
 };
 const stars = [];
 const bossbullets=[]; 
-const enemyBullets = [];
+let enemyBullets = [];
 const enemies = [];
 let score=0;
 let keys = {};
