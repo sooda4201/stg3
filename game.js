@@ -182,17 +182,6 @@ function spawnEnemy() {
   }
 }
 
-//ゲームオーバー画面
-function drawGameOver() {
-  ctx.fillStyle = 'white';
-  ctx.font = '40px Arial';
-  ctx.textAlign = 'center';
-  ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
-  ctx.font = '20px Arial';
-  ctx.fillText('Press Space to Retry', canvas.width / 2, canvas.height / 2 + 40);
-  drawScore();
-}
-
 //ボスの出現
 function checkBossAppear() {
   if (!boss && score >= 2000) {
@@ -287,6 +276,16 @@ function drawbossbullets(){
       });
     }
 
+    //ゲームオーバー画面
+function drawGameOver() {
+  ctx.fillStyle = 'white';
+  ctx.font = '40px Arial';
+  ctx.textAlign = 'center';
+  ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
+  ctx.font = '20px Arial';
+  ctx.fillText('Press Space to Retry', canvas.width / 2, canvas.height / 2 + 40);
+  drawScore();
+}
 
 /*canvas.addEventListener('click', () => {
   if (gameOver) {
