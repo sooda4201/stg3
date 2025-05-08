@@ -252,6 +252,16 @@ function drawBoss() {
       player.y < boss.y + boss.height &&
       player.y + player.height > boss.y) {
   }
+  //弾の発射
+ if (Math.random() < 0.002) { // 0.2%の確率で発射（毎フレーム）
+  bossbullets.push({
+    x: boss.x + boss.width / 2 - 2.5,
+    y: boss.y + boss.height,
+    width: 5,
+    height: 10,
+    speed: 4
+  });
+}
 }
 
 //ボスの弾の描画
