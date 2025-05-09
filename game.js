@@ -1,4 +1,4 @@
-document.onkeydown = function(e)
+document.onkeydown = function startGame(e)
 {	
   drawScore();
 	switch( e.keyCode )
