@@ -35,9 +35,9 @@ const player = {
 };
 const stars = [];
 const bossbullets=[]; 
-let enemyBullets = [];
+const enemyBullets = [];
 const enemies = [];
-let score=0;
+letc score=0;
 let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
