@@ -267,8 +267,8 @@ function drawBoss() {
 
 //ボスの弾の描画
 function drawbossbullets(){
-  bossbullets.forEach((bullet,index)=> {
-    bullet.y += bullet.speed*1.2;
+  bullet.forEach((bullet,index)=> {
+    bullet.y += bullet.speed*1.5;
    // ctx.fillRect(bullet.x, bullet.y, bullet.width*3, bullet.height*3);
     ctx.drawImage(bossbulletsImg, bossbullets.x, bossbullets.y, bossbullets.width, bossbullets.height);
 
