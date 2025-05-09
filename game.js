@@ -19,8 +19,8 @@ let boss = null;
 const bossImg = new Image();
 bossImg.src = 'boss.png'; 
 
-const bossbulletsImg = new Image();
-bossbulletsImg.src = 'bossbullets.png';
+//const bossbulletsImg = new Image();
+//bossbulletsImg.src = 'bossbullets.png';
 
 const player = {
   x: canvas.width / 2 - 20,
