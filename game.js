@@ -208,6 +208,7 @@ function drawBoss() {
   if (!boss) return;
   lastEnemySpawn=0;
   enemies.length=0;
+  enemyBullets.length=0;
 
   // 横移動（バウンド）
   boss.x += boss.speed * boss.direction;
