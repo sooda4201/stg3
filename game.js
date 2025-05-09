@@ -42,7 +42,6 @@ let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
 let gamestop=false;
-let stage = 1;
 
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
@@ -328,7 +327,11 @@ function resetGame() {
   enemies.length = 0;
   enemyBullets.length=0;
   boss = null;
-  score = 0;
+  if(!gameOver){
+    score++;
+  }else{
+    score = 0;
+  }
   gameOver = false;
   lastEnemySpawn = 0;
   gameLoop(); 
