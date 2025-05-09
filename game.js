@@ -382,6 +382,5 @@ function gameLoop() {
 }
 }
 
-
 gameLoop();
   }}
