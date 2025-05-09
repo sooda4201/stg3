@@ -2,7 +2,7 @@ document.onkeydown = function(e)
 {	
 	switch( e.keyCode )
 	{
-       case 13:
+    case 13:
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
