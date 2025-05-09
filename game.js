@@ -54,7 +54,6 @@ document.addEventListener('keydown', (e) => {
     ctx.font = '20px Arial';
     ctx.fillText('Press p to Retry', canvas.width / 2, canvas.height / 2 + 40);
     gamestop = !gamestop;
-    drawScore();
   }
 
 });
