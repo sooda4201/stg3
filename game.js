@@ -324,6 +324,7 @@ function resetGame() {
   player.bullets = [];
   enemies.length = 0;
   enemyBullets.length=0;
+  bossbullets.length=0;
   boss = null;
   if(!gameOver){
     score++;
