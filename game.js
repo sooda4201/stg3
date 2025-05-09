@@ -269,7 +269,7 @@ function drawBoss() {
 function drawbossbullets(){
   ctx.fillStyle='red';
   bossbullets.forEach((bullet,index)=> {
-    bullet.y += bullet.speed*1.5;
+    bullet.y += bullet.speed*1.2;
    ctx.fillRect(bullet.x, bullet.y, bullet.width*3, bullet.height*3);
     //ctx.drawImage(bossbulletsImg, bossbullets.x, bossbullets.y, bossbullets.width, bossbullets.height);
 
