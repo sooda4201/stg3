@@ -232,6 +232,7 @@ function drawBoss() {
       player.bullets.splice(bIndex, 1);
 
       if (boss.hp <= 0) {
+        boss=null;
         score += 500;
         resetGame();
         // ここでクリア画面表示とかもできる
