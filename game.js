@@ -156,6 +156,23 @@ function drawEnemyBullets() {
   ctx.fillStyle = 'orange';
   enemyBullets.forEach((bullet, index) => {
     bullet.y += bullet.speed*1.2;
+        // グラデーションで光る感じに
+    const gradient = ctx.createRadialGradient(
+      bullet.x + bullet.width / 2,
+      bullet.y + bullet.height / 2,
+      0,
+      bullet.x + bullet.width / 2,
+      bullet.y + bullet.height / 2,
+      bullet.width
+    );
+    gradient.addColorStop(0, 'yellow');
+    gradient.addColorStop(0.5, 'red');
+    gradient.addColorStop(1, 'transparent');
+
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(bullet.x + bullet.width / 2, bullet.y + bullet.height / 2, bullet.width, 0, Math.PI * 2);
+    ctx.fill();
     ctx.fillRect(bullet.x, bullet.y, bullet.width*0.8, bullet.height*0.8);
 
     // 自機との当たり判定
