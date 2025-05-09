@@ -1,6 +1,6 @@
 document.onkeydown = function(e)
 {	
-  
+  drawScore();
 	switch( e.keyCode )
 	{
        case 32:
