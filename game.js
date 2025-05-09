@@ -237,10 +237,6 @@ function drawBoss() {
         boss = null;
         score += 500;
         // ここでクリア画面表示とかもできる
-          // 一定時間後にゲームをループ再開（1秒後）
-        setTimeout(() => {
-        resetGame(); // ステージ1から再スタート（ループ）
-       }, 1000);
       }
     }
   });
@@ -305,8 +301,7 @@ function drawGameOver() {
   }
 });*/
 
-//ゲームリセット
-function resetGame() {
+/*function resetGame() {
   stage++;
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
@@ -317,20 +312,22 @@ function resetGame() {
   boss = null;
   lastEnemySpawn = 0;
   gameLoop();// もう一度ループ開始
-}
+}*/
 
 
-/*function resetGame() {
+//ゲームリセット
+function resetGame() {
   player.x = canvas.width / 2 - player.width / 2;
   player.y = canvas.height - 60;
   player.bullets = [];
   enemies.length = 0;
+  enemyBullets.length=0;
   boss = null;
   score = 0;
   gameOver = false;
   lastEnemySpawn = 0;
   gameLoop(); 
-}*/
+}
 
 //スコアの表示
 function drawScore(){
