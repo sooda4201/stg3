@@ -36,7 +36,7 @@ let keys = {};
 let lastEnemySpawn = 0;
 let gameOver=false;
 let gamestop=false;
-let nextBossScore = 2000;
+let nextBossScore = 2500;
 
 document.addEventListener('keydown', (e) => {
   keys[e.code] = true;
@@ -236,7 +236,7 @@ function drawBoss() {
       if (boss.hp <= 0) {
         boss=null;
         score += 500;
-        nextBossScore += 2000; // ← ここで次回出現スコアを更新
+        nextBossScore += 2500; // ← ここで次回出現スコアを更新
         resetGame();
         // ここでクリア画面表示とかもできる
       }
