@@ -267,10 +267,11 @@ function drawBoss() {
 
 //ボスの弾の描画
 function drawbossbullets(){
+  ctx.fillStyle='red';
   bossbullets.forEach((bullet,index)=> {
     bullet.y += bullet.speed*1.5;
-   // ctx.fillRect(bullet.x, bullet.y, bullet.width*3, bullet.height*3);
-    ctx.drawImage(bossbulletsImg, bossbullets.x, bossbullets.y, bossbullets.width, bossbullets.height);
+   ctx.fillRect(bullet.x, bullet.y, bullet.width*3, bullet.height*3);
+    //ctx.drawImage(bossbulletsImg, bossbullets.x, bossbullets.y, bossbullets.width, bossbullets.height);
 
     // 自機との当たり判定
     if (
