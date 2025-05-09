@@ -254,7 +254,7 @@ function drawBoss() {
         gameOver=true;
   }
   //弾の発射
- if (Math.random() < 0.03) { // 5%の確率で発射（毎フレーム）
+ if (Math.random() < 0.03) { //3%の確率で発射（毎フレーム）
   bossbullets.push({
     x: boss.x + boss.width / 2 - 2.5,
     y: boss.y + boss.height,
