@@ -377,6 +377,7 @@ function gameLoop() {
   }
   requestAnimationFrame(gameLoop);
 }else{  //ゲームオーバーならば
+  drawScore();
   drawStars(); 
   drawGameOver();
 }
