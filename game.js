@@ -1,3 +1,8 @@
+document.onkeydown = function(e)
+{	
+	switch( e.keyCode )
+	{
+       case 32:
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -378,3 +383,4 @@ function gameLoop() {
 
 
 gameLoop();
+  }}
