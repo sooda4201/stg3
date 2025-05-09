@@ -373,6 +373,7 @@ function gameLoop() {
   drawEnemies();
   checkBossAppear();     
   drawBoss();   
+  drawbossbullets();
   drawEnemyBullets(); 
   drawScore();
   spawnEnemy();
