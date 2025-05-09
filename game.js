@@ -1,5 +1,6 @@
 document.onkeydown = function(e)
 {	
+  
 	switch( e.keyCode )
 	{
        case 32:
@@ -252,7 +253,7 @@ function drawBoss() {
         gameOver=true;
   }
   //弾の発射
- if (Math.random() < 0.002) { // 0.2%の確率で発射（毎フレーム）
+ if (Math.random() < 0.05) { // 5%の確率で発射（毎フレーム）
   bossbullets.push({
     x: boss.x + boss.width / 2 - 2.5,
     y: boss.y + boss.height,
