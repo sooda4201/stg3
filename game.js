@@ -328,6 +328,7 @@ function resetGame() {
   boss = null;
   if(!gameOver){
     score++;
+    speed*1.2;
   }else{
     score = 0;
   }
