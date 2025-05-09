@@ -302,7 +302,7 @@ function drawGameOver() {
     resetGame();
   }
 });*/
-
+//スコアをそのまま
 /*function resetGame() {
   stage++;
   player.x = canvas.width / 2 - player.width / 2;
