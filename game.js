@@ -1,11 +1,5 @@
 document.onkeydown = function(e)
 {	
-  ctx.fillStyle = 'white';
-  ctx.font = '40px Arial';
-  ctx.textAlign = 'center';
-  ctx.fillText('START', canvas.width / 2, canvas.height / 2);
-  ctx.font = '20px Arial';
-  ctx.fillText('Press enter to Retry', canvas.width / 2, canvas.height / 2 + 40);
 	switch( e.keyCode )
 	{
     case 13:
